@@ -1,0 +1,120 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+        .hero {
+          min-height: 100vh;
+          background: #1a0c06;
+          display: flex; align-items: center; justify-content: center;
+          position: relative; overflow: hidden;
+        }
+        .hero-bg {
+          position: absolute; inset: 0;
+          background: radial-gradient(ellipse at 70% 50%, rgba(201,123,75,0.18) 0%, transparent 65%),
+                      radial-gradient(ellipse at 20% 80%, rgba(201,123,75,0.10) 0%, transparent 50%);
+        }
+        .hero-circles {
+          position: absolute; inset: 0; overflow: hidden;
+        }
+        .hero-circle {
+          position: absolute; border-radius: 50%; border: 1px solid rgba(201,123,75,0.15);
+        }
+        .hero-circle-1 { width: 600px; height: 600px; top: 50%; left: 60%; transform: translate(-50%,-50%); }
+        .hero-circle-2 { width: 800px; height: 800px; top: 50%; left: 60%; transform: translate(-50%,-50%); }
+        .hero-circle-3 { width: 1000px; height: 1000px; top: 50%; left: 60%; transform: translate(-50%,-50%); }
+        .hero-content {
+          position: relative; z-index: 2;
+          max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 48px;
+          display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .hero-text { }
+        .hero-eyebrow {
+          font-family: 'Noto Serif KR', Georgia, serif;
+          font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+          color: #c97b4b; margin-bottom: 24px;
+          display: flex; align-items: center; gap: 12px;
+        }
+        .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: #c97b4b; }
+        .hero-title {
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-size: clamp(3.5rem, 6vw, 5.5rem);
+          font-weight: 300; line-height: 1.05;
+          color: #fffaf5; margin: 0 0 12px;
+          letter-spacing: -0.01em;
+        }
+        .hero-title em { font-style: italic; color: #c97b4b; }
+        .hero-subtitle {
+          font-family: 'Noto Serif KR', Georgia, serif;
+          font-size: 1rem; color: rgba(255,250,245,0.5);
+          letter-spacing: 0.15em; margin-bottom: 48px;
+        }
+        .hero-desc {
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-size: 1.15rem; color: rgba(255,250,245,0.7);
+          line-height: 1.8; margin-bottom: 48px; font-weight: 300;
+        }
+        .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .hero-btn-primary {
+          background: #c97b4b; color: #fffaf5;
+          padding: 14px 36px; border: none; cursor: pointer;
+          font-family: 'Noto Serif KR', Georgia, serif;
+          font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+          text-decoration: none; display: inline-block;
+          transition: background 0.3s, transform 0.2s;
+        }
+        .hero-btn-primary:hover { background: #a85e32; transform: translateY(-1px); }
+        .hero-btn-ghost {
+          color: rgba(255,250,245,0.6);
+          padding: 14px 0; border: none; background: none; cursor: pointer;
+          font-family: 'Noto Serif KR', Georgia, serif;
+          font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+          text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+          border-bottom: 1px solid rgba(255,250,245,0.2);
+          transition: color 0.3s, border-color 0.3s;
+        }
+        .hero-btn-ghost:hover { color: #fffaf5; border-color: #fffaf5; }
+        .hero-visual {
+          display: flex; align-items: center; justify-content: center;
+        }
+        .hero-card {
+          background: rgba(255,250,245,0.04); border: 1px solid rgba(255,250,245,0.08);
+          padding: 40px; border-radius: 4px; width: 100%; max-width: 380px;
+          backdrop-filter: blur(10px);
+        }
+        .hero-card-label {
+          font-family: 'Noto Serif KR', Georgia, serif;
+          font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+          color: #c97b4b; margin-bottom: 24px;
+        }
+        .hero-card-item {
+          border-bottom: 1px solid rgba(255,250,245,0.08);
+          padding: 16px 0; display: flex; justify-content: space-between; align-items: center;
+        }
+        .hero-card-item:last-child { border-bottom: none; }
+        .hero-card-item-name {
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-size: 1.1rem; color: #fffaf5; font-weight: 300;
+        }
+        .hero-card-item-desc {
+          font-size: 0.75rem; color: rgba(255,250,245,0.4);
+          font-family: 'Noto Serif KR', Georgia, serif; margin-top: 2px;
+        }
+        .hero-card-item-price {
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-size: 1rem; color: #c97b4b;
+        }
+        .hero-scroll {
+          position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+          display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 2;
+        }
+        .hero-scroll span {
+          font-family: 'Noto Serif KR', Georgia, serif;
+          font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,250,245,0.3); text-transform: uppercase;
+        }
+        .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(201,123,75,0.6), transparent); animation: scrollLine 1.5s ease-in-out infinite; }
+        @keyframes scrollLine { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.1)} }
+        @media (max-width: 768px) {
+          .hero-content { grid-template-columns: 1fr; gap: 48px; padding: 80px 24px 48px; text-align: center; }
+          .hero-eyebrow { justify-content: center; }
+          .hero-actions { justify-content: center; }
+          .hero-visual { display: none; }
+        }
+      
